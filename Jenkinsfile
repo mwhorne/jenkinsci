@@ -55,5 +55,14 @@ node {
         stage('collect results') {
             junit keepLongStdio: true, testResults: 'tests/**/*-junit.xml'
         }
+        
+        stage('Delete Test Org') {
+            timeout(time: 120, unit: 'SECONDS') {
+                rc = sh returnStatus: true, script: "${toolbelt}/sfdx force:org:delete --targetusername ${SFDC_USERNAME} --noprompt"
+                if (rc != 0) {
+                    error 'org deletion request failed'
+                }
+            }
+        }
     }
 }
