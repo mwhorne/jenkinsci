@@ -1,10 +1,7 @@
 {
   "packageDirectories": [
     {
-      "path": "force-app"
-    },
-    {
-      "path": "contacts-vue-app",
+      "path": "force-app",
       "default": true
     }
   ],
