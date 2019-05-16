@@ -1,5 +1,5 @@
 {
-    "orgName": "Demo Company",
+    "orgName": "Jenkins CI Example",
     "edition": "Developer",
     "orgPreferences" : {
         "enabled": ["S1DesktopEnabled"]
